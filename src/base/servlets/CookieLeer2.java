@@ -26,6 +26,7 @@ public class CookieLeer2 extends HttpServlet {
 	}
 
 	private String leerCookie(HttpServletRequest request, String nombre) {
+
 		Cookie[] cookies = request.getCookies();
 
 		String dato = null;

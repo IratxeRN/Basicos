@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Formulario de ejemplo</title>
+</head>
+<body>
+
+	<h1>Tres formas basicas de peticion de formulario para pasarnos
+		datos</h1>
+	<hr>	
+	<h2>Por medio de codigo directo en href</h2>
+	<a href="hola?nombre=Iratxe+Reguera">Saludar a Iratxe</a>
+	<hr>
+	<h2>Por GET</h2>
+	<p>Suele ser para que no se visualice por url</p>
+	<form action="hola">
+		<input type="text" placeholder="Meter nombre" name="nombre" />
+		<button>Aceptar</button>
+	</form>
+	<hr>
+	<h2>Por POST</h2>
+	<p>Suele ser para que no se visualice por url, por eso es recomendable. Sobre todo si usamos passwords</p>
+	<form action="hola" method="post">
+		<input type="text" placeholder="Meter nombre" name="nombre" />
+		<button>Aceptar</button>
+	</form>
+
+
+</body>
+</html>

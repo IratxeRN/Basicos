@@ -28,6 +28,7 @@ public class IdiomaCoockie extends HttpServlet {
 //		response.getWriter().print("Has elegido en el desplegable: " + idioma + "\n");
 //		response.getWriter().print("Se ha creado la cookie: " + leng_cookie.getName() + " - " + leng_cookie.getValue());
 
+		// guarda el dato y manda al get para q se vuelva a cargar el jsp
 		response.sendRedirect("formCookie.jsp");
 
 	}

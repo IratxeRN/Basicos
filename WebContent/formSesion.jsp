@@ -10,8 +10,9 @@
 
 <form action="login" method="post">
 
-		
-	<input type="text" name="usuario" placeholder="Usuario">
+	<label for="correo">Correo</label>
+	<input type="text" name="correo" placeholder="Correo">
+	<label for="clave">Clave</label>
 	<input type="password" name="clave" placeholder="Clave">
 	
 	<button>Aceptar</button>

@@ -11,8 +11,8 @@
 <form action="idioma" method="post" method="get">
 
 	<label for="idioma">Elige idioma</label>
-	<select name="idioma" >
 	
+	<select name="idioma" >
 		<option value="ingles" ${cookie.leng.value == 'ingles' ? 'selected' : ''}>Ingles</option>
 		<option value="euskera" ${cookie.leng.value == 'euskera' ? 'selected' : ''}>Euskera</option>
 		<option value="esperanto" ${cookie.leng.value == 'esperanto' ? 'selected' : ''}>Esperanto</option>

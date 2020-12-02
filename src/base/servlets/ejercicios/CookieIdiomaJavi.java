@@ -1,4 +1,4 @@
-package base.servlets;
+package base.servlets.ejercicios;
 
 import java.io.IOException;
 
@@ -10,32 +10,39 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class CookieEscribir
+ * Servlet implementation class CookieIdiomaJavi
  */
-@WebServlet("/cookie-escribir")
+@WebServlet("/cookie-idioma")
 
-public class CookieEscribir extends HttpServlet {
+public class CookieIdiomaJavi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String idioma = null;
 
-		// crear una cookies.
-		Cookie cookie = new Cookie("demo", "decookieXXX");
+		Cookie[] cookies = request.getCookies();
 
-		// maximo tiempo que dure la cookie
-		cookie.setMaxAge(60 * 60 * 24 * 7);// en segundos. Una semana
-		/// cookie.setMaxAge(Integer.MAX_VALUE); // El maximo de dias que se pueda
-		response.addCookie(cookie);
+		for (Cookie cookie : cookies) {
+			if (cookie.getName().equals("idioma")) {
+				idioma = cookie.getValue();
+				break;
+			}
+		}
 
 		response.setContentType("text/plain");
-		response.getWriter().println("Cookie escrita");
+		response.getWriter().println(idioma);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String idioma = request.getParameter("idioma");
 
-		doGet(request, response);
+		Cookie cookie = new Cookie("idioma", idioma);
+
+		response.addCookie(cookie);
+
+		response.sendRedirect("cookie-idioma");
 	}
 
 }

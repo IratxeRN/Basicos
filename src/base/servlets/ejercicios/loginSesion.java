@@ -1,4 +1,4 @@
-package base.servlets;
+package base.servlets.ejercicios;
 
 import java.io.IOException;
 
